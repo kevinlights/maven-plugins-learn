@@ -27,7 +27,7 @@ import java.util.Locale;
 )
 public class SimpleReport extends AbstractMavenReport {
 
-    @Parameter(defaultValue = "${project}", readonly = true)
+    @Parameter(defaultValue = "${project}", readonly = true, required = true)
     private MavenProject simpleProject;
 
     @Override
