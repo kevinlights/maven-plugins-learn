@@ -35,6 +35,10 @@ public class SimpleReport extends AbstractMavenReport {
         Log logger = getLog();
         logger.info("Generating " + getOutputName() + ".html for "
                 + simpleProject.getName() + " " + simpleProject.getVersion());
+        writeSink();
+    }
+
+    private void writeSink() throws MavenReportException {
         Sink mainSink = getSink();
         if (mainSink == null) {
             throw new MavenReportException("Could not get the Doxia sink");
